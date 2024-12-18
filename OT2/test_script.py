@@ -9,7 +9,7 @@ from ot2_env_wrapper import OT2Env
 
 # Initialize ClearML Task
 task = Task.init(
-    project_name='Mentor Group A/Group1/ArnoutOpfergelt',  # Replace with your project path
+    project_name='Pendulum-v1/ArnoutOpfergelt',  # Replace with your project path
     task_name='Experiment2'
 )
 
@@ -25,21 +25,25 @@ run = wandb.init(project="sb3_ot2env_demo", sync_tensorboard=True)
 # Create custom environment
 env = OT2Env()
 
-# Define PPO Hyperparameters
-hyperparams = {
-    'learning_rate': 0.001,
-    'batch_size': 64,
-    'n_steps': 2048,
-    'epochs': 10,
-}
+# Parse command-line arguments
+parser = argparse.ArgumentParser()
+parser.add_argument("--learning_rate", type=float, default=0.0003)
+parser.add_argument("--batch_size", type=int, default=64)
+parser.add_argument("--n_steps", type=int, default=2048)
+parser.add_argument("--n_epochs", type=int, default=10)
+
+args = parser.parse_args()
 
 # Initialize PPO Model
 model = PPO(
     'MlpPolicy', 
     env, 
     verbose=1, 
-    tensorboard_log=f"runs/{run.id}",
-    **hyperparams
+    learning_rate=args.learning_rate, 
+    batch_size=args.batch_size, 
+    n_steps=args.n_steps, 
+    n_epochs=args.n_epochs, 
+    tensorboard_log=f"runs/{run.id}"
 )
 
 wandb_callback = WandbCallback(

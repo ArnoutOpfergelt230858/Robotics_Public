@@ -5,7 +5,7 @@ from stable_baselines3 import PPO
 import gymnasium as gym
 from wandb.integration.sb3 import WandbCallback
 from clearml import Task
-from OT2_env_wrapper import OT2Env
+from ot2_env_wrapper import OT2Env
 
 # Initialize ClearML Task
 task = Task.init(

@@ -152,3 +152,4 @@ class OT2Env(gym.Env):
     
     def close(self):
         self.sim.close()
+

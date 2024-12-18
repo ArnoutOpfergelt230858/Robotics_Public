@@ -9,7 +9,7 @@ from clearml import Task
 
 # Replace Pendulum-v1/YourName with your own project name (Folder/YourName, e.g. 2022-Y2B-RoboSuite/Michael)
 task = Task.init(project_name='Pendulum-v1/ArnoutOpfergelt', # NB: Replace YourName with your own name
-                    task_name='Experim ent1')
+                    task_name='Experiment2')
 
 #copy these lines exactly as they are
 #setting the base docker image

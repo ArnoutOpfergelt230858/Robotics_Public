@@ -4,6 +4,7 @@ import argparse
 from stable_baselines3 import PPO
 import gymnasium as gym
 from wandb.integration.sb3 import WandbCallback
+import typing_extensions
 
 from clearml import Task
 

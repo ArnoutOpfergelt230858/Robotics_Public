@@ -11,7 +11,7 @@ from clearml import Task
 
 # Replace Pendulum-v1/YourName with your own project name (Folder/YourName, e.g. 2022-Y2B-RoboSuite/Michael)
 task = Task.init(project_name='Mentor Group A/Group 1/Arnout', # NB: Replace YourName with your own name
-                    task_name='Experiment7')
+                    task_name='Experiment8')
 
 # Copy these lines exactly as they are
 # Setting the base docker image
@@ -27,10 +27,10 @@ parser.add_argument("--n_epochs", type=int, default=10)
 
 args = parser.parse_args()
 
-os.environ['WANDB_API_KEY'] = '17b671297e98466f9af4baa04230fcd84aec26c3'
+os.environ['WANDB_API_KEY'] = '83fb9634de2859207dcfe7a3d26409cf65ace208'
 
 # Initialize WandB project
-run = wandb.init(project="rl_test_wrapper", sync_tensorboard=True)
+run = wandb.init(project="rl_models", sync_tensorboard=True)
 
 # Instantiate your custom environment
 wrapped_env = OT2Env()  # Modify this to match your wrapper class

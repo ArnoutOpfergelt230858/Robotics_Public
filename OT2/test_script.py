@@ -15,7 +15,7 @@ import torch  # Import torch for gradient clipping
 
 # Replace Pendulum-v1/YourName with your own project name (Folder/YourName, e.g. 2022-Y2B-RoboSuite/Michael)
 task = Task.init(project_name='Mentor Group A/Group 1/Arnout', # NB: Replace YourName with your own name
-                    task_name='Experiment9')
+                    task_name='Experiment10')
 
 # Copy these lines exactly as they are
 # Setting the base docker image

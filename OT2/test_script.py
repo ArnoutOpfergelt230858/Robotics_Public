@@ -10,7 +10,7 @@ import typing_extensions
 from clearml import Task
 
 # Replace Pendulum-v1/YourName with your own project name (Folder/YourName, e.g. 2022-Y2B-RoboSuite/Michael)
-task = Task.init(project_name='Mentor Group A/Group 1/Teun', # NB: Replace YourName with your own name
+task = Task.init(project_name='Mentor Group A/Group 1/Arnout', # NB: Replace YourName with your own name
                     task_name='Experiment3')
 
 # Copy these lines exactly as they are
@@ -20,9 +20,9 @@ task.set_base_docker('deanis/2023y2b-rl:latest')
 task.execute_remotely(queue_name="default")
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--learning_rate", type=float, default=0.0003)
+parser.add_argument("--learning_rate", type=float, default=0.001)
 parser.add_argument("--batch_size", type=int, default=64)
-parser.add_argument("--n_steps", type=int, default=2048)
+parser.add_argument("--n_steps", type=int, default=1028)
 parser.add_argument("--n_epochs", type=int, default=10)
 
 args = parser.parse_args()

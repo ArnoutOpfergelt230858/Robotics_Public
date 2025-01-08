@@ -1,3 +1,7 @@
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+
+
 from stable_baselines3.common.env_checker import check_env
 from ot2_gym_wrapper import OT2Env
 from stable_baselines3 import PPO

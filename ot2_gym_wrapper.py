@@ -116,33 +116,39 @@ class OT2Env(gym.Env):
         # Calculate the distance between the pipette position and the goal position
         current_distance = np.linalg.norm(pipette_position - self.goal_position)
 
-        # Calculate the reward
-        reward = -current_distance
+        # Step-specific reward
+        reward = -1  # Penalize each step by -1
+        if current_distance < self.previous_distance:
+            reward += 5  # Reward for moving closer
+        else:
+            reward -= 15  # Penalty for moving further away
 
-        # Check if distance improved compared to the last step
-        if hasattr(self, 'previous_distance'):  # Ensure the attribute exists
-            if current_distance < self.previous_distance:  # Distance improved
-                reward += 10  # Bonus for improving distance
-
-        # Update the previous distance for the next step
+        # Update the previous distance
         self.previous_distance = current_distance
 
-        # Initialize the termination flag
-        terminated = False
-        
-        # Check if the episode should be truncated due to step limit
+        # Give 100 points if within 0.01 distance to the goal
+        if current_distance < 0.01:
+            reward += 1000
+            terminated = True
+        else:
+            terminated = False
+
+        # Penalize if steps exceed max steps
         if self.steps >= self.max_steps:
-            reward -= 10  # Penalty for exceeding the step limit
-            terminated = True  # Force termination
+            reward -= 50  # Penalty for exceeding max steps
+            terminated = True
             truncated = True
         else:
             truncated = False
+
+        # Update cumulative reward
+        self.cumulative_reward += reward
 
         # Increment the step counter
         self.steps += 1
 
         # Return the updated observation, reward, and episode state
-        info = {}
+        info = {"cumulative_reward": self.cumulative_reward}  # Include cumulative reward in info
         return observation, float(reward), terminated, truncated, info
 
 

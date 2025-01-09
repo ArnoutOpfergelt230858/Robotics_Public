@@ -105,7 +105,7 @@ class OT2Env(gym.Env):
         # Step-specific reward
         reward = -1  # Penalize each step by -1
         if current_distance < self.previous_distance:
-            reward += 5  # Reward for moving closer
+            reward += 10  # Reward for moving closer
         else:
             reward -= 15  # Penalty for moving further away
 

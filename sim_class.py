@@ -5,7 +5,6 @@ import math
 import logging
 import os
 import random
-
 #logging.basicConfig(level=logging.INFO)
 
 class Simulation:

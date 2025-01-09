@@ -8,14 +8,11 @@ from stable_baselines3 import PPO
 import time
 import wandb
 from wandb.integration.sb3 import WandbCallback
-import os
 import argparse
 import typing_extensions
 from clearml import Task
 from stable_baselines3.common.callbacks import BaseCallback
 import torch  # Import torch for gradient clipping
-
-# Teun van der Wolf s235874
 
 # Replace Pendulum-v1/YourName with your own project name (Folder/YourName, e.g. 2022-Y2B-RoboSuite/Michael)
 task = Task.init(project_name='Mentor Group A/Group 1/Arnout', # NB: Replace YourName with your own name

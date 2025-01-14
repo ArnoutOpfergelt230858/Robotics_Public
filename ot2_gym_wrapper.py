@@ -107,14 +107,14 @@ class OT2Env(gym.Env):
         if current_distance < self.previous_distance:
             reward += 30  # Reward for moving closer
         else:
-            reward -= 50  # Penalty for moving further away
+            reward -= 34  # Penalty for moving further away
 
         # Update the previous distance
         self.previous_distance = current_distance
 
         # Give 100 points if within 0.001 distance to the goal
         if current_distance < 0.01:
-            reward += 1000
+            reward += 10000
             terminated = True
         else:
             terminated = False

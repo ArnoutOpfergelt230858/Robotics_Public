@@ -1,0 +1,68 @@
+Using cpu device
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+Starting training process
+Logging to tensorboard_logs/ma7vhne2\PPO_0
+-----------------------------
+| time/              |      |
+|    fps             | 1390 |
+|    iterations      | 1    |
+|    time_elapsed    | 0    |
+|    total_timesteps | 512  |
+-----------------------------
+Traceback (most recent call last):
+  File "C:\Users\Arnou\OneDrive\Documenten\GitHub\Robotics_Public\test_script_local.py", line 173, in <module>
+    ppo_model.learn(
+  File "C:\Users\Arnou\anaconda3\envs\block_c\lib\site-packages\stable_baselines3\ppo\ppo.py", line 311, in learn
+    return super().learn(
+  File "C:\Users\Arnou\anaconda3\envs\block_c\lib\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 338, in learn
+    callback.on_training_end()
+  File "C:\Users\Arnou\anaconda3\envs\block_c\lib\site-packages\stable_baselines3\common\callbacks.py", line 117, in on_training_end
+    self._on_training_end()
+  File "C:\Users\Arnou\anaconda3\envs\block_c\lib\site-packages\stable_baselines3\common\callbacks.py", line 232, in _on_training_end
+    callback.on_training_end()
+  File "C:\Users\Arnou\anaconda3\envs\block_c\lib\site-packages\stable_baselines3\common\callbacks.py", line 117, in on_training_end
+    self._on_training_end()
+  File "C:\Users\Arnou\anaconda3\envs\block_c\lib\site-packages\wandb\integration\sb3\sb3.py", line 141, in _on_training_end
+    self.save_model()
+  File "C:\Users\Arnou\anaconda3\envs\block_c\lib\site-packages\wandb\integration\sb3\sb3.py", line 145, in save_model
+    wandb.save(self.path, base_path=self.model_save_path)
+  File "C:\Users\Arnou\anaconda3\envs\block_c\lib\site-packages\wandb\sdk\wandb_run.py", line 395, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "C:\Users\Arnou\anaconda3\envs\block_c\lib\site-packages\wandb\sdk\wandb_run.py", line 385, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Arnou\anaconda3\envs\block_c\lib\site-packages\wandb\sdk\wandb_run.py", line 2032, in save
+    return self._save(
+  File "C:\Users\Arnou\anaconda3\envs\block_c\lib\site-packages\wandb\sdk\wandb_run.py", line 2091, in _save
+    target_path.symlink_to(source_path)
+  File "C:\Users\Arnou\anaconda3\envs\block_c\lib\pathlib.py", line 1255, in symlink_to
+    self._accessor.symlink(target, self, target_is_directory)
+OSError: [WinError 1314] Een van de vereiste bevoegdheden is niet aan de client toegekend: 'C:\\Users\\Arnou\\OneDrive\\Documenten\\GitHub\\Robotics_Public\\saved_models\\ma7vhne2\\model.zip' -> 'C:\\Users\\Arnou\\OneDrive\\Documenten\\GitHub\\Robotics_Public\\wandb\\run-20250114_114949-ma7vhne2\\files\\model.zip'
+Traceback (most recent call last):
+  File "C:\Users\Arnou\OneDrive\Documenten\GitHub\Robotics_Public\test_script_local.py", line 173, in <module>
+    ppo_model.learn(
+  File "C:\Users\Arnou\anaconda3\envs\block_c\lib\site-packages\stable_baselines3\ppo\ppo.py", line 311, in learn
+    return super().learn(
+  File "C:\Users\Arnou\anaconda3\envs\block_c\lib\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 338, in learn
+    callback.on_training_end()
+  File "C:\Users\Arnou\anaconda3\envs\block_c\lib\site-packages\stable_baselines3\common\callbacks.py", line 117, in on_training_end
+    self._on_training_end()
+  File "C:\Users\Arnou\anaconda3\envs\block_c\lib\site-packages\stable_baselines3\common\callbacks.py", line 232, in _on_training_end
+    callback.on_training_end()
+  File "C:\Users\Arnou\anaconda3\envs\block_c\lib\site-packages\stable_baselines3\common\callbacks.py", line 117, in on_training_end
+    self._on_training_end()
+  File "C:\Users\Arnou\anaconda3\envs\block_c\lib\site-packages\wandb\integration\sb3\sb3.py", line 141, in _on_training_end
+    self.save_model()
+  File "C:\Users\Arnou\anaconda3\envs\block_c\lib\site-packages\wandb\integration\sb3\sb3.py", line 145, in save_model
+    wandb.save(self.path, base_path=self.model_save_path)
+  File "C:\Users\Arnou\anaconda3\envs\block_c\lib\site-packages\wandb\sdk\wandb_run.py", line 395, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "C:\Users\Arnou\anaconda3\envs\block_c\lib\site-packages\wandb\sdk\wandb_run.py", line 385, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Arnou\anaconda3\envs\block_c\lib\site-packages\wandb\sdk\wandb_run.py", line 2032, in save
+    return self._save(
+  File "C:\Users\Arnou\anaconda3\envs\block_c\lib\site-packages\wandb\sdk\wandb_run.py", line 2091, in _save
+    target_path.symlink_to(source_path)
+  File "C:\Users\Arnou\anaconda3\envs\block_c\lib\pathlib.py", line 1255, in symlink_to
+    self._accessor.symlink(target, self, target_is_directory)
+OSError: [WinError 1314] Een van de vereiste bevoegdheden is niet aan de client toegekend: 'C:\\Users\\Arnou\\OneDrive\\Documenten\\GitHub\\Robotics_Public\\saved_models\\ma7vhne2\\model.zip' -> 'C:\\Users\\Arnou\\OneDrive\\Documenten\\GitHub\\Robotics_Public\\wandb\\run-20250114_114949-ma7vhne2\\files\\model.zip'

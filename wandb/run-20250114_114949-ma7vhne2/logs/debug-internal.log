@@ -1,0 +1,18 @@
+{"time":"2025-01-14T11:49:50.0345502+01:00","level":"INFO","msg":"using version","core version":"0.19.0"}
+{"time":"2025-01-14T11:49:50.0345502+01:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\Arnou\\OneDrive\\Documenten\\GitHub\\Robotics_Public\\wandb\\run-20250114_114949-ma7vhne2\\logs\\debug-core.log"}
+{"time":"2025-01-14T11:49:51.9250194+01:00","level":"INFO","msg":"created new stream","id":"ma7vhne2"}
+{"time":"2025-01-14T11:49:51.9250194+01:00","level":"INFO","msg":"stream: started","id":"ma7vhne2"}
+{"time":"2025-01-14T11:49:51.9250194+01:00","level":"INFO","msg":"handler: started","stream_id":"ma7vhne2"}
+{"time":"2025-01-14T11:49:51.9255379+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"ma7vhne2"}
+{"time":"2025-01-14T11:49:51.9255379+01:00","level":"INFO","msg":"sender: started","stream_id":"ma7vhne2"}
+{"time":"2025-01-14T11:49:52.253882+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-14T11:49:57.094541+01:00","level":"INFO","msg":"stream: closing","id":"ma7vhne2"}
+{"time":"2025-01-14T11:49:57.094541+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-14T11:49:57.0955718+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-14T11:50:06.4353892+01:00","level":"INFO","msg":"tensorboard: no root directory after 10 seconds, using working directory"}
+{"time":"2025-01-14T11:50:06.4381005+01:00","level":"ERROR","msg":"tensorboard: error creating symlink","target":"C:\\Users\\Arnou\\OneDrive\\Documenten\\GitHub\\Robotics_Public\\tensorboard_logs\\ma7vhne2\\PPO_0\\events.out.tfevents.1736851796.Laptoppie.40748.0","symlink":"C:\\Users\\Arnou\\OneDrive\\Documenten\\GitHub\\Robotics_Public\\wandb\\run-20250114_114949-ma7vhne2\\files\\tensorboard_logs\\ma7vhne2\\PPO_0\\events.out.tfevents.1736851796.Laptoppie.40748.0","error":"symlink C:\\Users\\Arnou\\OneDrive\\Documenten\\GitHub\\Robotics_Public\\tensorboard_logs\\ma7vhne2\\PPO_0\\events.out.tfevents.1736851796.Laptoppie.40748.0 C:\\Users\\Arnou\\OneDrive\\Documenten\\GitHub\\Robotics_Public\\wandb\\run-20250114_114949-ma7vhne2\\files\\tensorboard_logs\\ma7vhne2\\PPO_0\\events.out.tfevents.1736851796.Laptoppie.40748.0: A required privilege is not held by the client."}
+{"time":"2025-01-14T11:50:07.072654+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-14T11:50:07.3825426+01:00","level":"INFO","msg":"handler: closed","stream_id":"ma7vhne2"}
+{"time":"2025-01-14T11:50:07.3825426+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"ma7vhne2"}
+{"time":"2025-01-14T11:50:07.3825426+01:00","level":"INFO","msg":"sender: closed","stream_id":"ma7vhne2"}
+{"time":"2025-01-14T11:50:07.3833166+01:00","level":"INFO","msg":"stream: closed","id":"ma7vhne2"}
